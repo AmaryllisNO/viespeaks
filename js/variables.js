@@ -14,7 +14,7 @@ export let qna = [
   },
   {
     question:
-      'Do you feel the taunt pull of time weaving you closer to and endless slumber?',
+      'Do you feel the taunt pull of time weaving you closer to an endless slumber?',
     answer: ['Yes', `I don't know`],
   },
 ];

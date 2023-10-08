@@ -1,14 +1,4 @@
 export const typeText = ({ i, text, textBox, audio, audioDuration = 0 }) => {
-  if (
-    i === undefined ||
-    text === undefined ||
-    textBox === undefined ||
-    audio === undefined ||
-    audioDuration === undefined
-  ) {
-    console.log('Some of the variables are undefined!');
-    return; // exit function early
-  }
   if (i < text.length) {
     let char = text.charAt(i);
 
