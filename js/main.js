@@ -1,6 +1,4 @@
 // Initialize variables and Audio objects
-const characters =
-  'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 let phrases = [
   'Summon Vie',
   'In the dark, close your eyes',
@@ -21,6 +19,7 @@ let qna = [
   },
 ];
 
+let audioDuration;
 let typedString = '';
 let text = phrases[0];
 let textBox = document.getElementById('text-box');
@@ -31,7 +30,6 @@ let i = 0;
 let audio = new Audio('../sounds/viespeaks.mp3');
 let bgMusic = new Audio('../sounds/ambient-vie-track.mp3');
 let bell = new Audio('../sounds/bellbong.mp3');
-let isBgMusicStarted = false; // To make sure it starts only once
 let canClickDocument = true;
 
 // Initialize AudioContext and gain node

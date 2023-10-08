@@ -1,0 +1,15 @@
+{
+  "name": "viespeaks",
+  "version": "1.0.0",
+  "description": "Creepy promo website for a new album. It acts as a riddle and a character dialogue screen with different options to choose from.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  }
+}
