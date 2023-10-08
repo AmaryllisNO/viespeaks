@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Bloodletter Regular';
+  src: url('../fonts/Bloodletter-Regular.ttf') format('truetype');
+}
+
+html {
+  cursor: url('../img/vieeye.png'), auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.vie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 100%; */
+  height: 100%;
+}
+
+.text {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.48);
+  color: #ff8267;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Bloodletter Regular';
+  letter-spacing: 5px;vie
+  /* text-transform: uppercase; */
+}
+
+.answers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'text Regular';
+  letter-spacing: 5px;
+
+  & span {
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.48);
+    transition: all 0.01s;
+    &:hover {
+      transform: translateY(-5px);
+      animation: shiver 1s infinite alternate;
+      color: white;
+      ::before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in-completely {
+  opacity: 0;
+  animation: fadeInCompletely ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fadeInCompletely {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shiver {
+  0% {
+    /* transform: skewX(-15deg); */
+
+    /* opacity: 0; */
+    /* transform: translateX(-10%); */
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  60% {
+    opacity: 0.5;
+    /* transform: translateX(0%); */
+  }
+  80% {
+    /* transform: none; */
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    /* transform: skewX(0deg); */
+    text-shadow: none;
+  }
+}
